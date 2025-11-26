@@ -14,205 +14,201 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       min-height: 100vh;
-      padding: 15px;
-      padding-bottom: 80px;
+      padding: 10px;
+      padding-bottom: 90px;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #fff;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      margin-bottom: 8px;
+      margin: 15px 0 5px 0;
       font-weight: 800;
     }
 
     .subtitle {
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #fff;
-      margin-bottom: 20px;
-      opacity: 0.9;
+      margin-bottom: 15px;
+      opacity: 0.95;
     }
 
     .container {
-      max-width: 600px;
+      max-width: 100%;
       margin: 0 auto;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 20px;
-      border-radius: 25px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-      margin-bottom: 20px;
+      background: white;
+      padding: 18px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      margin-bottom: 15px;
     }
 
     .card h2 {
       color: #667eea;
       margin-bottom: 15px;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 700;
     }
 
+    /* BRINCADEIRAS */
     .brincadeira-item {
-      display: flex;
-      flex-direction: column;
-      padding: 15px;
-      background: linear-gradient(135deg, #f6f8fc, #eef2ff);
-      border-radius: 18px;
-      margin-bottom: 12px;
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-      transition: all 0.3s ease;
-    }
-
-    .brincadeira-item:active {
-      transform: scale(0.98);
+      background: #f8f9ff;
+      border-radius: 15px;
+      padding: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
     }
 
     .brincadeira-header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 12px;
+      gap: 10px;
     }
 
     .checkbox {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       cursor: pointer;
-      margin-right: 12px;
       flex-shrink: 0;
+      margin-top: 2px;
       accent-color: #667eea;
     }
 
     .brincadeira-nome {
       flex: 1;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       color: #2d3748;
       line-height: 1.4;
     }
 
-    .brincadeira-controls {
+    .brincadeira-footer {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
       gap: 10px;
-      flex-wrap: wrap;
     }
 
     .time-colors {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
+      justify-content: center;
+      padding: 8px 0;
     }
 
     .time-indicator {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
       cursor: pointer;
       border: 3px solid transparent;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     .time-indicator:active {
-      transform: scale(0.9);
+      transform: scale(0.92);
     }
 
     .time-indicator.selected {
       border-color: #2d3748;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      transform: scale(1.1);
+      box-shadow: 0 0 0 2px white, 0 0 0 5px #2d3748;
+      transform: scale(1.05);
     }
 
-    .tempo-actions {
+    .tempo-section {
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      gap: 8px;
       background: white;
-      padding: 8px 12px;
+      padding: 10px;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .tempo-display {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: #667eea;
-      min-width: 70px;
+      min-width: 75px;
       text-align: center;
     }
 
     .btn-icon {
       background: linear-gradient(135deg, #667eea, #764ba2);
       border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      padding: 8px 12px;
-      border-radius: 10px;
       color: white;
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      cursor: pointer;
+      padding: 0;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
       transition: all 0.2s ease;
-      min-width: 44px;
-      min-height: 44px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.4rem;
     }
 
     .btn-icon:active {
-      transform: scale(0.95);
+      transform: scale(0.92);
     }
 
     .btn-icon:disabled {
-      opacity: 0.5;
+      opacity: 0.4;
       cursor: not-allowed;
     }
 
+    /* BOTÕES */
     .btn-primary {
       background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
       border: none;
-      padding: 15px 25px;
-      border-radius: 15px;
-      font-size: 1.1rem;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      transition: all 0.2s ease;
       width: 100%;
     }
 
     .btn-primary:active {
-      transform: translateY(2px);
+      transform: scale(0.97);
     }
 
     .btn-sortear {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 15px;
+      right: 15px;
       background: linear-gradient(135deg, #f093fb, #f5576c);
       color: white;
       border: none;
-      padding: 18px 25px;
+      padding: 16px 22px;
       border-radius: 50px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 8px 24px rgba(245, 87, 108, 0.5);
+      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
       z-index: 1000;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
     }
 
     .btn-sortear:active {
-      transform: scale(0.95);
+      transform: scale(0.92);
     }
 
+    /* MODAL */
     .modal {
       display: none;
       position: fixed;
@@ -220,11 +216,11 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.75);
       z-index: 2000;
       justify-content: center;
       align-items: center;
-      padding: 20px;
+      padding: 15px;
     }
 
     .modal.active {
@@ -233,27 +229,27 @@
 
     .modal-content {
       background: white;
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
       width: 100%;
-      max-width: 400px;
+      max-width: 380px;
     }
 
     .modal-content h2 {
       color: #667eea;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     .modal-content input {
       width: 100%;
-      padding: 15px;
-      margin: 10px 0;
+      padding: 14px;
+      margin: 8px 0;
       border: 2px solid #e2e8f0;
-      border-radius: 12px;
-      font-size: 1.1rem;
+      border-radius: 10px;
+      font-size: 1rem;
     }
 
     .modal-content input:focus {
@@ -264,7 +260,7 @@
     .modal-buttons {
       display: flex;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .modal-buttons button {
@@ -277,68 +273,67 @@
     }
 
     .resultado-sorteio {
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 900;
       color: #667eea;
       text-align: center;
-      margin: 30px 0;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      margin: 25px 0;
     }
 
+    /* TIMES */
     .times-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 12px;
-      margin-top: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
     }
 
     .time-card {
-      padding: 18px;
-      border-radius: 18px;
+      padding: 16px;
+      border-radius: 15px;
       color: white;
       font-weight: 700;
       text-align: center;
-      font-size: 1.1rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .time-card:active {
-      transform: scale(0.95);
-    }
-
-    .time-card .remove-time {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: rgba(0,0,0,0.3);
-      border: none;
-      color: white;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      font-weight: bold;
+      min-height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    .time-card .remove-time {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: white;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
     .form-time {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 15px;
     }
 
     .form-time input,
     .form-time select {
-      padding: 15px;
+      padding: 14px;
       border: 2px solid #e2e8f0;
-      border-radius: 12px;
-      font-size: 1.1rem;
+      border-radius: 10px;
+      font-size: 1rem;
     }
 
     .form-time input:focus,
@@ -347,55 +342,40 @@
       border-color: #667eea;
     }
 
+    /* PLACAR */
     .placar-item {
       display: flex;
       align-items: center;
-      padding: 15px;
-      background: linear-gradient(135deg, #f6f8fc, #eef2ff);
-      border-radius: 15px;
-      margin-bottom: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      justify-content: space-between;
+      padding: 12px;
+      background: #f8f9ff;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      gap: 10px;
     }
 
     .placar-item .brincadeira-nome {
       flex: 1;
       font-weight: 600;
       color: #2d3748;
+      font-size: 0.95rem;
     }
 
     .placar-item .vencedor {
-      padding: 10px 18px;
-      border-radius: 12px;
+      padding: 8px 14px;
+      border-radius: 10px;
       color: white;
       font-weight: 700;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      white-space: nowrap;
     }
 
     .empty-state {
       text-align: center;
       color: #a0aec0;
-      padding: 30px;
-      font-size: 1rem;
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .time-indicator {
-        width: 35px;
-        height: 35px;
-      }
-
-      .tempo-display {
-        font-size: 1.1rem;
-      }
-
-      .btn-icon {
-        font-size: 1.3rem;
-        padding: 6px 10px;
-      }
+      padding: 25px 15px;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -403,7 +383,7 @@
   <h1>🎉 GINCANA</h1>
   <p class="subtitle">Organize suas brincadeiras</p>
 
-  <button class="btn-sortear" onclick="abrirSorteio()">🎲 SORTEAR</button>
+  <button class="btn-sortear" onclick="abrirSorteio()">🎲</button>
 
   <div class="container">
     <!-- Seção de Times -->
@@ -499,13 +479,15 @@
       
       if (brincadeirasAtivas.length === 0) {
         lista.innerHTML = '<div class="empty-state">✅ Todas as brincadeiras foram realizadas!</div>';
+        renderizarPlacar();
         return;
       }
       
-      brincadeirasAtivas.forEach((b, index) => {
+      brincadeirasAtivas.forEach((b) => {
         const div = document.createElement('div');
         div.className = 'brincadeira-item';
         
+        // Header com checkbox e nome
         const header = document.createElement('div');
         header.className = 'brincadeira-header';
         
@@ -521,9 +503,11 @@
         header.appendChild(checkbox);
         header.appendChild(nome);
         
-        const controls = document.createElement('div');
-        controls.className = 'brincadeira-controls';
+        // Footer com times e timer
+        const footer = document.createElement('div');
+        footer.className = 'brincadeira-footer';
         
+        // Times (se existirem)
         if (times.length > 0) {
           const colorsDiv = document.createElement('div');
           colorsDiv.className = 'time-colors';
@@ -537,11 +521,12 @@
             indicator.onclick = () => selecionarVencedor(b.id, time.id);
             colorsDiv.appendChild(indicator);
           });
-          controls.appendChild(colorsDiv);
+          footer.appendChild(colorsDiv);
         }
         
-        const tempoActions = document.createElement('div');
-        tempoActions.className = 'tempo-actions';
+        // Seção de tempo
+        const tempoSection = document.createElement('div');
+        tempoSection.className = 'tempo-section';
         
         const tempo = document.createElement('span');
         tempo.className = 'tempo-display';
@@ -558,14 +543,14 @@
         btnClock.textContent = '⏰';
         btnClock.onclick = () => abrirTimer(b.id);
         
-        tempoActions.appendChild(tempo);
-        tempoActions.appendChild(btnPlay);
-        tempoActions.appendChild(btnClock);
+        tempoSection.appendChild(tempo);
+        tempoSection.appendChild(btnPlay);
+        tempoSection.appendChild(btnClock);
         
-        controls.appendChild(tempoActions);
+        footer.appendChild(tempoSection);
         
         div.appendChild(header);
-        div.appendChild(controls);
+        div.appendChild(footer);
         
         lista.appendChild(div);
       });
@@ -603,7 +588,10 @@
 
     function salvarTempo() {
       const minutos = parseInt(document.getElementById('tempoMinutos').value);
-      if (!minutos || minutos < 1) return;
+      if (!minutos || minutos < 1) {
+        alert('Digite um tempo válido!');
+        return;
+      }
       
       const brincadeira = brincadeirasAtivas.find(b => b.id === brincadeiraTimerAtual);
       if (brincadeira) {
@@ -631,9 +619,7 @@
           } else {
             clearInterval(brincadeira.timer);
             brincadeira.rodando = false;
-            const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBTGH0fPTgjMGHm7A7+OZSA0PVKzn77BdGAg+ltrzxnMnBSp+zPLaizsIGGS57OihUhELTKXh8bllHAU2jdXzyn0vBSF1xe/glEILElyx6OyrWBUIQ5zd8sFuJAUuhM/z1YU2Bhxqvu7mnEoODlOq5O+zYBoGPJPY88p2KwUme8rx3I4+CRZiturqpVQTCkqi4fK8aB8FM4nU8tGAMQYfcsLu45ZFDBFYr+fvtmEaBkCY2fPJdSsFKH3M8tyLPAkXZbzs6aRTEgpMo+HyvmsiBS+Fz/PWhDQGHGy+7eeaTg4OUqrl77NgGgU7ktbzy3YrBSh7zPDckEEKE2C35u+sVRUJRZzd8sFuJAUug8/y1oU4BxtnvO3om0oPDlGs5fCyYRoGOpHW88p3LAUpfMvw3I8/CRZjturqplQSCkqi4PG9aCAFM4fU8tKAMAcdbcHu4pRFDBFXr+fvtmEaBkCY2fPJdSsFKH3M8tyLPAkXZbzs6aRTEgpNouDxvmsjBS+Fz/PWhDUGG2y+7uiaUQ4NUqrl77NgGgU7ktbzyncsBSl8y/DckEAKElyx6O6rVhYIQ5vd8sFsJAUug8/y1oY4BxpmvO3nm0oPDlGs5fCyYRoGOpHW88p3LAUpfMvw3I4+CRZjturqplQSCkqi4PG9aCAFM4fU8tKAMAcdbcHu4pRFDBFXr+fvtmEaBkCY2fPJdSsFKH3M8tyLPAkXZbzs6aRTEgpNouDxvmsjBS+Fz/PWhDUGG2y+7uiaUQ4NUqrl77NgGgU7ktbzy3csBSl8y/DckEAKElyx6O6rVhYIQ5vd8sFsJAUug8/y1oY4BxpmvO3nm0oPDlGs5fCyYRoGOpHW88p3LAUpfMvw3I4+CRZjturqplQSCkqi4PG9aCAFM4fU8tKAMAcdbcHu4pRFDBFXr+fvtmEaBkCY2fPJdSsFKH3M8tyLPAkXZbzs6aRTEgpNouDxvmsjBS+Fz/PWhDUGG2y+7uiaUQ4NUqrl77NgGgU7ktbzy3csBSl8y/DckEAKElyx6O6rVhYIQ5vd8sFsJAUug8/y1oY4BxpmvO3nm0oPDlGs5fCyYRoGOpHW88p3LAUpfMvw3I4+CRZjturqplQSCkqi4PG9aCAFM4fU8tKAMAcdbcHu4pRFDBFXr+fvtmEaB');
-            audio.play().catch(() => {});
-            alert('⏰ Tempo esgotado!');
+            alert('⏰ Tempo esgotado para: ' + brincadeira.nome);
             renderizarBrincadeiras();
           }
         }, 1000);
