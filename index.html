@@ -22,170 +22,233 @@
 
     h1 {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      margin: 15px 0 5px 0;
-      font-weight: 800;
+      text-shadow: 3px 3px 12px rgba(0,0,0,0.4);
+      margin: 20px 0 8px 0;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
 
     .subtitle {
       text-align: center;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #fff;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       opacity: 0.95;
+      font-weight: 500;
+    }
+
+    .btn-reset {
+      display: block;
+      margin: 0 auto 20px auto;
+      background: linear-gradient(135deg, #f5576c 0%, #c92a3e 100%);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(245, 87, 108, 0.4);
+      transition: all 0.3s ease;
+      max-width: 300px;
+    }
+
+    .btn-reset:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.5);
+    }
+
+    .btn-reset:active {
+      transform: scale(0.97);
     }
 
     .container {
-      max-width: 100%;
+      max-width: 520px;
       margin: 0 auto;
     }
 
     .card {
       background: white;
-      padding: 18px;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      margin-bottom: 15px;
+      padding: 24px;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
     }
 
     .card h2 {
       color: #667eea;
-      margin-bottom: 15px;
-      font-size: 1.4rem;
-      font-weight: 700;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    /* BRINCADEIRAS */
     .brincadeira-item {
-      background: #f8f9ff;
-      border-radius: 15px;
-      padding: 12px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 3px 12px rgba(102, 126, 234, 0.12);
+      border: 2px solid #e8ecff;
+      transition: all 0.3s ease;
+    }
+
+    .brincadeira-item:hover {
+      box-shadow: 0 6px 18px rgba(102, 126, 234, 0.2);
+      transform: translateY(-2px);
+      border-color: #d0d9ff;
     }
 
     .brincadeira-header {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 12px;
-      gap: 10px;
-    }
-
-    .checkbox {
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-      flex-shrink: 0;
-      margin-top: 2px;
-      accent-color: #667eea;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
     .brincadeira-nome {
       flex: 1;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
       color: #2d3748;
       line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .brincadeira-footer {
+    .brincadeira-actions {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .time-colors {
-      display: flex;
-      gap: 5px;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 6px;
-      background: white;
-      border-radius: 10px;
-    }
-
-    .time-indicator {
-      width: 20px;
-      height: 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: all 0.2s ease;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      align-items: center;
+      gap: 10px;
       flex-shrink: 0;
     }
 
-    .time-indicator:active {
-      transform: scale(0.9);
-    }
-
-    .time-indicator.selected {
-      border-color: #2d3748;
-      box-shadow: 0 0 0 2px white, 0 0 0 4px #2d3748;
-      transform: scale(1.15);
-    }
-
-    .tempo-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-      align-items: stretch;
-    }
-
-    .tempo-display {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #667eea;
-      text-align: center;
-      background: white;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .btn-icon {
-      background: linear-gradient(135deg, #667eea, #764ba2);
+    .btn-pontuacao {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       border: none;
       color: white;
       cursor: pointer;
-      padding: 12px;
-      border-radius: 12px;
+      padding: 10px 18px;
+      border-radius: 10px;
       box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      min-height: 55px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      font-weight: 700;
+      white-space: nowrap;
+      touch-action: manipulation;
     }
 
-    .btn-icon:active {
+    .btn-pontuacao:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-pontuacao:active {
       transform: scale(0.95);
     }
 
-    .btn-icon:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
+    .pontuacao-section {
+      background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+      padding: 20px;
+      border-radius: 16px;
+      margin-top: 12px;
+      box-shadow: 0 3px 12px rgba(102, 126, 234, 0.1);
+      border: 2px solid #e8ecff;
+      display: none;
     }
 
-    /* BOTÕES */
-    .btn-primary {
+    .pontuacao-section.visible {
+      display: block;
+    }
+
+    .pontuacao-section h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #667eea;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .lugar-controle {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 14px;
+    }
+
+    .lugar-controle span {
+      font-weight: 800;
+      min-width: 80px;
+      font-size: 1rem;
+      color: #2d3748;
       background: linear-gradient(135deg, #667eea, #764ba2);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lugar-controle select {
+      flex: 1;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 2px solid #e2e8f0;
+      background-color: white;
+      font-size: 1rem;
+      min-height: 52px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 700;
+      color: #2d3748;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .lugar-controle select:hover {
+      border-color: #b8c5ff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    }
+
+    .lugar-controle select:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15), 0 4px 12px rgba(102, 126, 234, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .lugar-controle select option {
+      padding: 12px;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       border: none;
-      padding: 14px 20px;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-weight: 600;
+      padding: 16px 24px;
+      border-radius: 14px;
+      font-size: 1.05rem;
+      font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s ease;
       width: 100%;
+      touch-action: manipulation;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
     }
 
     .btn-primary:active {
@@ -194,26 +257,30 @@
 
     .btn-sortear {
       position: fixed;
-      bottom: 15px;
-      right: 15px;
-      background: linear-gradient(135deg, #f093fb, #f5576c);
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
       color: white;
       border: none;
-      padding: 16px 22px;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 700;
+      padding: 18px 26px;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+      box-shadow: 0 8px 24px rgba(245, 87, 108, 0.5);
       z-index: 1000;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
+    }
+
+    .btn-sortear:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 32px rgba(245, 87, 108, 0.6);
     }
 
     .btn-sortear:active {
       transform: scale(0.92);
     }
 
-    /* MODAL */
     .modal {
       display: none;
       position: fixed;
@@ -221,11 +288,18 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.75);
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(4px);
       z-index: 2000;
       justify-content: center;
       align-items: center;
       padding: 15px;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .modal.active {
@@ -234,38 +308,53 @@
 
     .modal-content {
       background: white;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
       width: 100%;
-      max-width: 380px;
+      max-width: 400px;
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     .modal-content h2 {
       color: #667eea;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       text-align: center;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+      font-weight: 800;
     }
 
     .modal-content input {
       width: 100%;
-      padding: 14px;
-      margin: 8px 0;
+      padding: 16px;
+      margin: 10px 0;
       border: 2px solid #e2e8f0;
-      border-radius: 10px;
-      font-size: 1rem;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      transition: all 0.2s ease;
     }
 
     .modal-content input:focus {
       outline: none;
       border-color: #667eea;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
     }
 
     .modal-buttons {
       display: flex;
-      gap: 10px;
-      margin-top: 15px;
+      gap: 12px;
+      margin-top: 18px;
     }
 
     .modal-buttons button {
@@ -273,158 +362,357 @@
     }
 
     .btn-secondary {
-      background: #cbd5e0;
+      background: linear-gradient(135deg, #cbd5e0 0%, #a0aec0 100%);
       color: #2d3748;
     }
 
     .resultado-sorteio {
-      font-size: 4rem;
+      font-size: 5rem;
       font-weight: 900;
       color: #667eea;
       text-align: center;
-      margin: 25px 0;
+      margin: 30px 0;
+      text-shadow: 2px 2px 8px rgba(102, 126, 234, 0.3);
     }
 
-    /* TIMES */
     .times-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 10px;
-      margin-top: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 8px;
     }
 
     .time-card {
-      padding: 16px;
-      border-radius: 15px;
+      padding: 10px;
+      border-radius: 12px;
       color: white;
-      font-weight: 700;
+      font-weight: 800;
       text-align: center;
-      font-size: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-size: 0.9rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
       position: relative;
-      min-height: 60px;
+      min-height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+      word-break: break-word;
+      padding-right: 28px;
+    }
+
+    .time-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
     .time-card .remove-time {
       position: absolute;
-      top: 5px;
-      right: 5px;
-      background: rgba(0,0,0,0.3);
+      top: 3px;
+      right: 3px;
+      background: rgba(0,0,0,0.6);
       border: none;
       color: white;
       border-radius: 50%;
-      width: 26px;
-      height: 26px;
+      width: 22px;
+      height: 22px;
       cursor: pointer;
-      font-size: 1.1rem;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
       line-height: 1;
+      transition: all 0.2s ease;
+    }
+
+    .time-card .remove-time:hover {
+      background: rgba(0,0,0,0.6);
+      transform: scale(1.1);
     }
 
     .form-time {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
       gap: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .form-time input,
     .form-time select {
-      padding: 14px;
+      padding: 12px 14px;
       border: 2px solid #e2e8f0;
-      border-radius: 10px;
-      font-size: 1rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
     }
 
     .form-time input:focus,
     .form-time select:focus {
       outline: none;
       border-color: #667eea;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
     }
 
-    /* PLACAR */
+    .form-time button {
+      padding: 12px 20px;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
     .placar-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px;
-      background: #f8f9ff;
-      border-radius: 12px;
-      margin-bottom: 8px;
-      gap: 10px;
+      padding: 16px;
+      background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+      border-radius: 16px;
+      margin-bottom: 12px;
+      gap: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 2px solid #e8ecff;
+    }
+
+    .placar-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
 
     .placar-item .brincadeira-nome {
       flex: 1;
-      font-weight: 600;
+      font-weight: 700;
       color: #2d3748;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
     .placar-item .vencedor {
-      padding: 8px 14px;
-      border-radius: 10px;
+      padding: 10px 18px;
+      border-radius: 12px;
       color: white;
-      font-weight: 700;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      font-weight: 800;
+      font-size: 0.95rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
       white-space: nowrap;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .brincadeira-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     .empty-state {
       text-align: center;
       color: #a0aec0;
-      padding: 25px 15px;
-      font-size: 0.95rem;
+      padding: 12px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .cronograma-box {
+      background: #f8f9ff;
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .cronograma-item {
+      margin-bottom: 14px;
+      padding: 14px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .cronograma-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .cronograma-item.antes {
+      border-left: 5px solid #667eea;
+    }
+
+    .cronograma-item.lanche {
+      border-left: 5px solid #48bb78;
+    }
+
+    .cronograma-item.depois {
+      border-left: 5px solid #f5576c;
+    }
+
+    .cronograma-item.bingo {
+      border-left: 5px solid #f093fb;
+    }
+
+    .cronograma-title {
+      font-weight: 800;
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+
+    .cronograma-desc {
+      color: #2d3748;
+      font-size: 0.98rem;
+      font-weight: 500;
+    }
+
+    .tempo-total {
+      margin-top: 18px;
+      padding: 16px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .tempo-total-title {
+      color: white;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .tempo-total-valor {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-top: 6px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .contador-time {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px;
+      background: #f8f9ff;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      gap: 10px;
+      border: 2px solid #e8ecff;
+    }
+
+    .contador-time-nome {
+      font-weight: 800;
+      color: #2d3748;
+      font-size: 1rem;
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .contador-controles {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-contador {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-contador:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-contador:active {
+      transform: scale(0.95);
+    }
+
+    .contador-valor {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #667eea;
+      min-width: 40px;
+      text-align: center;
+      background: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
   </style>
 </head>
 <body>
   <h1>🎉 GINCANA</h1>
-  <p class="subtitle">Organize suas brincadeiras</p>
+  <p class="subtitle">Organize suas brincadeiras com estilo</p>
+  <button class="btn-reset" onclick="resetarTudo()">🔄</button>
 
   <button class="btn-sortear" onclick="abrirSorteio()">🎲</button>
 
   <div class="container">
-    <!-- Seção de Times -->
     <div class="card">
       <h2>🏆 Times</h2>
       <div class="form-time">
-        <input type="text" id="nomeTime" placeholder="Nome do time">
-        <select id="corTime">
-          <option value="#ff0000">🔴 Vermelho</option>
-          <option value="#0000ff">🔵 Azul</option>
-          <option value="#00ff00">🟢 Verde</option>
-          <option value="#ffff00">🟡 Amarelo</option>
-          <option value="#800080">🟣 Roxo</option>
-          <option value="#ff69b4">🩷 Rosa</option>
-          <option value="#ff8c00">🟠 Laranja</option>
-          <option value="#00ffff">🔷 Ciano</option>
-        </select>
-        <button class="btn-primary" onclick="adicionarTime()">Adicionar Time</button>
+        <div class="form-time-row">
+          <input type="text" id="nomeTime" placeholder="Nome do time">
+          <select id="corTime">
+            <option value="#ff0000">🔴 Vermelho</option>
+            <option value="#0000ff">🔵 Azul</option>
+            <option value="#00ff00">🟢 Verde</option>
+            <option value="#ffff00">🟡 Amarelo</option>
+            <option value="#800080">🟣 Roxo</option>
+            <option value="#ff69b4">🩷 Rosa</option>
+            <option value="#ff8c00">🟠 Laranja</option>
+            <option value="#00ffff">🔷 Ciano</option>
+          </select>
+        </div>
+        <button class="btn-primary" onclick="adicionarTime()">➕ Adicionar Time</button>
       </div>
       <div class="times-container" id="timesContainer"></div>
     </div>
 
-    <!-- Lista de Brincadeiras -->
     <div class="card">
       <h2>🎮 Brincadeiras</h2>
       <div id="brincadeirasLista"></div>
     </div>
 
-    <!-- Placar -->
+    <div class="card">
+      <h2>🛠️ Ferramentas</h2>
+      <div class="brincadeira-item">
+        <div class="brincadeira-header">
+          <span class="brincadeira-nome">Passo a Passo - Perguntas</span>
+        </div>
+        <div class="brincadeira-footer">
+          <button class="btn-primary" id="btnPergunta" onclick="mostrarPergunta()">Próxima Pergunta</button>
+          <div id="perguntaPassoAPasso" style="margin-top: 12px; padding: 16px; background: #fff; border-radius: 14px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <p id="textoPergunta" style="font-weight: 700; color: #2d3748; font-size: 1.15rem; line-height: 1.6;">Clique no botão para começar!</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="brincadeira-item" style="margin-top: 16px;">
+        <div class="brincadeira-header">
+          <span class="brincadeira-nome">Passa ou Repassa - Contador</span>
+        </div>
+        <div class="brincadeira-footer">
+          <div id="contadorPassaOuRepassa"></div>
+          <button class="btn-primary" style="margin-top: 12px;" onclick="finalizarPassaOuRepassa()">✅ Calcular Ranking</button>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <h2>📊 Placar</h2>
       <div id="placarLista"></div>
     </div>
   </div>
 
-  <!-- Modal de Sorteio -->
   <div class="modal" id="modalSorteio">
     <div class="modal-content">
       <h2>🎲 Sorteio</h2>
@@ -440,127 +728,160 @@
     </div>
   </div>
 
-  <!-- Modal de Timer -->
-  <div class="modal" id="modalTimer">
-    <div class="modal-content">
-      <h2>⏰ Definir Tempo</h2>
-      <input type="number" id="tempoMinutos" placeholder="Tempo em minutos" min="1">
-      <div class="modal-buttons">
-        <button class="btn-primary btn-secondary" onclick="fecharTimer()">Cancelar</button>
-        <button class="btn-primary" onclick="salvarTempo()">Salvar</button>
-      </div>
-    </div>
-  </div>
-
   <script>
     const brincadeiras = [
-      'Dança das Cadeiras',
-      'Saco de Batata',
-      'Passar pela lona com copo de água',
-      'Construção de Torre',
-      'Passa ou Repassa (torta na cara/bexiga)',
-      'Travessia com pé de Bebê',
-      'Mímica',
-      'Captura Bexiga',
-      'Copo Envenenado'
+      {nome: 'Bambole', periodo: 'antes'},
+      {nome: 'Corrida de saco', periodo: 'antes'},
+      {nome: 'Estorar balão no pé', periodo: 'antes'},
+      {nome: 'Colocar blusa sem deixar o balão cair', periodo: 'antes'},
+      {nome: 'Dança das Cadeiras', periodo: 'antes'},
+      {nome: 'Nó', periodo: 'antes'},
+      {nome: 'Passar balão no meio das pernas', periodo: 'antes'},
+      {nome: 'Passa ou Repassa (torta na cara/bexiga)', periodo: 'antes'},
+      {nome: 'Passar trigo por carta', periodo: 'antes'},
+      {nome: 'Construção de Torre', periodo: 'antes'},
+      {nome: 'Passar pela lona com copo de água', periodo: 'antes'},
+      {nome: 'Copo Envenenado', periodo: 'depois'},
+      {nome: 'Captura Bexiga', periodo: 'depois'},
+      {nome: 'Segurar o balde', periodo: 'depois'},
+      {nome: 'Vara na cabeça', periodo: 'depois'},
+      {nome: 'Esponja de água', periodo: 'depois'},
+      {nome: 'Passar água no copo para trás', periodo: 'depois'},
+      {nome: 'Tomar água primeiro', periodo: 'depois'},
+      {nome: 'Bingo', periodo: 'bingo'}
     ];
 
     let times = [];
-    let brincadeirasAtivas = brincadeiras.map((nome, i) => ({
-      id: i,
-      nome,
-      tempo: null,
-      tempoRestante: null,
-      timer: null,
-      rodando: false,
-      vencedor: null
+    let brincadeirasAtivas = brincadeiras.map((item, i) => ({
+      id: i, 
+      nome: item.nome, 
+      periodo: item.periodo,
+      vencedores: []
     }));
     let brincadeirasFinalizadas = [];
-    let brincadeiraTimerAtual = null;
+    let passaOuRepassaAcertos = {};
+    const PONTUACAO = {1: 15, 2: 10, 3: 5, 4: 0};
+
+    function carregarDados() {
+      try {
+        const dadosSalvos = localStorage.getItem('gincanaData');
+        if (dadosSalvos) {
+          const dados = JSON.parse(dadosSalvos);
+          if (dados.times) times = dados.times;
+          if (dados.brincadeirasAtivas) brincadeirasAtivas = dados.brincadeirasAtivas;
+          if (dados.brincadeirasFinalizadas) brincadeirasFinalizadas = dados.brincadeirasFinalizadas;
+          if (dados.passaOuRepassaAcertos) passaOuRepassaAcertos = dados.passaOuRepassaAcertos;
+        }
+      } catch (e) {
+        console.error('Erro ao carregar dados:', e);
+      }
+    }
+
+    function salvarDados() {
+      try {
+        const dados = {
+          times,
+          brincadeirasAtivas,
+          brincadeirasFinalizadas,
+          passaOuRepassaAcertos
+        };
+        localStorage.setItem('gincanaData', JSON.stringify(dados));
+      } catch (e) {
+        console.error('Erro ao salvar dados:', e);
+      }
+    }
 
     function renderizarBrincadeiras() {
       const lista = document.getElementById('brincadeirasLista');
       lista.innerHTML = '';
-      
       if (brincadeirasAtivas.length === 0) {
         lista.innerHTML = '<div class="empty-state">✅ Todas as brincadeiras foram realizadas!</div>';
         renderizarPlacar();
         return;
       }
-      
       brincadeirasAtivas.forEach((b) => {
         const div = document.createElement('div');
         div.className = 'brincadeira-item';
         
-        // Header com checkbox e nome
         const header = document.createElement('div');
         header.className = 'brincadeira-header';
-        
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.className = 'checkbox';
-        checkbox.onchange = () => removerBrincadeira(b.id);
         
         const nome = document.createElement('span');
         nome.className = 'brincadeira-nome';
         nome.textContent = b.nome;
-        
-        header.appendChild(checkbox);
         header.appendChild(nome);
         
-        // Footer com times e timer
-        const footer = document.createElement('div');
-        footer.className = 'brincadeira-footer';
+        const actions = document.createElement('div');
+        actions.className = 'brincadeira-actions';
         
-        // Times (se existirem)
         if (times.length > 0) {
-          const colorsDiv = document.createElement('div');
-          colorsDiv.className = 'time-colors';
-          times.forEach(time => {
-            const indicator = document.createElement('div');
-            indicator.className = 'time-indicator';
-            indicator.style.backgroundColor = time.cor;
-            if (b.vencedor === time.id) {
-              indicator.classList.add('selected');
-            }
-            indicator.onclick = () => selecionarVencedor(b.id, time.id);
-            colorsDiv.appendChild(indicator);
-          });
-          footer.appendChild(colorsDiv);
+          const btnPontuacao = document.createElement('button');
+          btnPontuacao.className = 'btn-pontuacao';
+          btnPontuacao.textContent = '📊 Pontuar';
+          btnPontuacao.onclick = () => togglePontuacao(b.id);
+          actions.appendChild(btnPontuacao);
         }
         
-        // Seção de tempo
-        const tempoSection = document.createElement('div');
-        tempoSection.className = 'tempo-section';
-        
-        const tempo = document.createElement('span');
-        tempo.className = 'tempo-display';
-        tempo.textContent = formatarTempo(b.tempoRestante || b.tempo);
-        
-        const btnPlay = document.createElement('button');
-        btnPlay.className = 'btn-icon';
-        btnPlay.textContent = b.rodando ? '⏸️' : '▶️';
-        btnPlay.onclick = () => toggleTimer(b.id);
-        btnPlay.disabled = !b.tempo;
-        
-        const btnClock = document.createElement('button');
-        btnClock.className = 'btn-icon';
-        btnClock.textContent = '⏰';
-        btnClock.onclick = () => abrirTimer(b.id);
-        
-        tempoSection.appendChild(tempo);
-        tempoSection.appendChild(btnPlay);
-        tempoSection.appendChild(btnClock);
-        
-        footer.appendChild(tempoSection);
-        
+        header.appendChild(actions);
         div.appendChild(header);
-        div.appendChild(footer);
+        
+        if (times.length > 0) {
+          const pontuacaoDiv = document.createElement('div');
+          pontuacaoDiv.className = 'pontuacao-section';
+          pontuacaoDiv.id = `pontuacao-${b.id}`;
+          
+          const pontuacaoTitle = document.createElement('h3');
+          pontuacaoTitle.textContent = 'Pontuação por Lugar';
+          pontuacaoDiv.appendChild(pontuacaoTitle);
+          
+          for (let lugar = 1; lugar <= 4; lugar++) {
+            const lugarDiv = document.createElement('div');
+            lugarDiv.className = 'lugar-controle';
+            const label = document.createElement('span');
+            label.textContent = `${lugar}º (${PONTUACAO[lugar]} pts)`;
+            const select = document.createElement('select');
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = 'Selecione...';
+            select.appendChild(defaultOption);
+            times.forEach(time => {
+              const option = document.createElement('option');
+              option.value = time.id;
+              option.textContent = time.nome;
+              option.style.backgroundColor = time.cor;
+              option.style.color = 'white';
+              option.style.fontWeight = '700';
+              select.appendChild(option);
+            });
+            const vencedorId = b.vencedores.find(v => v.lugar === lugar)?.timeId;
+            if (vencedorId) select.value = vencedorId;
+            select.onchange = (e) => selecionarVencedor(b.id, lugar, parseInt(e.target.value));
+            lugarDiv.appendChild(label);
+            lugarDiv.appendChild(select);
+            pontuacaoDiv.appendChild(lugarDiv);
+          }
+          
+          const btnFinalizar = document.createElement('button');
+          btnFinalizar.className = 'btn-primary';
+          btnFinalizar.textContent = '✅ Finalizar Brincadeira';
+          btnFinalizar.style.marginTop = '12px';
+          btnFinalizar.onclick = () => finalizarBrincadeira(b.id);
+          pontuacaoDiv.appendChild(btnFinalizar);
+          
+          div.appendChild(pontuacaoDiv);
+        }
         
         lista.appendChild(div);
       });
-      
       renderizarPlacar();
+      salvarDados();
+    }
+
+    function togglePontuacao(id) {
+      const pontuacaoDiv = document.getElementById(`pontuacao-${id}`);
+      if (pontuacaoDiv) {
+        pontuacaoDiv.classList.toggle('visible');
+      }
     }
 
     function removerBrincadeira(id) {
@@ -572,158 +893,158 @@
       renderizarBrincadeiras();
     }
 
-    function formatarTempo(segundos) {
-      if (!segundos) return '--:--';
-      const mins = Math.floor(segundos / 60);
-      const secs = segundos % 60;
-      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-    }
-
-    function abrirTimer(id) {
-      brincadeiraTimerAtual = id;
-      document.getElementById('modalTimer').classList.add('active');
-      document.getElementById('tempoMinutos').value = '';
-      document.getElementById('tempoMinutos').focus();
-    }
-
-    function fecharTimer() {
-      document.getElementById('modalTimer').classList.remove('active');
-      brincadeiraTimerAtual = null;
-    }
-
-    function salvarTempo() {
-      const minutos = parseInt(document.getElementById('tempoMinutos').value);
-      if (!minutos || minutos < 1) {
-        alert('Digite um tempo válido!');
-        return;
+    function finalizarBrincadeira(id) {
+      if (confirm('Finalizar esta brincadeira e passar para a próxima?')) {
+        removerBrincadeira(id);
       }
-      
-      const brincadeira = brincadeirasAtivas.find(b => b.id === brincadeiraTimerAtual);
-      if (brincadeira) {
-        brincadeira.tempo = minutos * 60;
-        brincadeira.tempoRestante = minutos * 60;
-      }
-      
-      fecharTimer();
-      renderizarBrincadeiras();
-    }
-
-    function toggleTimer(id) {
-      const brincadeira = brincadeirasAtivas.find(b => b.id === id);
-      if (!brincadeira || !brincadeira.tempo) return;
-      
-      if (brincadeira.rodando) {
-        clearInterval(brincadeira.timer);
-        brincadeira.rodando = false;
-      } else {
-        brincadeira.rodando = true;
-        brincadeira.timer = setInterval(() => {
-          if (brincadeira.tempoRestante > 0) {
-            brincadeira.tempoRestante--;
-            renderizarBrincadeiras();
-          } else {
-            clearInterval(brincadeira.timer);
-            brincadeira.rodando = false;
-            alert('⏰ Tempo esgotado para: ' + brincadeira.nome);
-            renderizarBrincadeiras();
-          }
-        }, 1000);
-      }
-      renderizarBrincadeiras();
     }
 
     function adicionarTime() {
       const nome = document.getElementById('nomeTime').value.trim();
       const cor = document.getElementById('corTime').value;
-      
       if (!nome) {
         alert('Digite o nome do time!');
         return;
       }
-      
-      times.push({ id: Date.now(), nome, cor });
+      const timeId = Date.now();
+      times.push({ id: timeId, nome, cor, pontuacao: 0 });
+      passaOuRepassaAcertos[timeId] = 0;
       document.getElementById('nomeTime').value = '';
       renderizarTimes();
       renderizarBrincadeiras();
+      renderizarContadorPassaOuRepassa();
+      salvarDados();
     }
 
     function removerTime(id) {
       if (!confirm('Remover este time?')) return;
-      
       times = times.filter(t => t.id !== id);
-      brincadeirasAtivas.forEach(b => {
-        if (b.vencedor === id) b.vencedor = null;
-      });
-      brincadeirasFinalizadas.forEach(b => {
-        if (b.vencedor === id) b.vencedor = null;
-      });
+      delete passaOuRepassaAcertos[id];
+      const limparVencedores = (brincadeira) => {
+        brincadeira.vencedores = brincadeira.vencedores.filter(v => v.timeId !== id);
+      };
+      brincadeirasAtivas.forEach(limparVencedores);
+      brincadeirasFinalizadas.forEach(limparVencedores);
       renderizarTimes();
       renderizarBrincadeiras();
+      renderizarContadorPassaOuRepassa();
+      salvarDados();
     }
 
     function renderizarTimes() {
       const container = document.getElementById('timesContainer');
       container.innerHTML = '';
-      
       if (times.length === 0) {
-        container.innerHTML = '<div class="empty-state">Adicione times para começar</div>';
         return;
       }
-      
       times.forEach(time => {
         const card = document.createElement('div');
         card.className = 'time-card';
         card.style.backgroundColor = time.cor;
-        card.innerHTML = `
-          ${time.nome}
-          <button class="remove-time" onclick="removerTime(${time.id})">×</button>
-        `;
+        card.innerHTML = `${time.nome}<button class="remove-time" onclick="removerTime(${time.id})">×</button>`;
         container.appendChild(card);
       });
     }
 
-    function selecionarVencedor(brincadeiraId, timeId) {
+    function selecionarVencedor(brincadeiraId, lugar, timeId) {
       const brincadeira = brincadeirasAtivas.find(b => b.id === brincadeiraId);
-      if (brincadeira) {
-        brincadeira.vencedor = brincadeira.vencedor === timeId ? null : timeId;
-        renderizarBrincadeiras();
-      }
+      if (!brincadeira) return;
+      brincadeira.vencedores = brincadeira.vencedores.filter(v => v.timeId !== timeId);
+      brincadeira.vencedores = brincadeira.vencedores.filter(v => v.lugar !== lugar);
+      if (timeId) brincadeira.vencedores.push({ lugar, timeId });
+      brincadeira.vencedores.sort((a, b) => a.lugar - b.lugar);
+      renderizarBrincadeiras();
+      salvarDados();
+    }
+    
+    function calcularPontuacaoTotal() {
+      times.forEach(t => t.pontuacao = 0);
+      const todasBrincadeiras = [...brincadeirasAtivas, ...brincadeirasFinalizadas];
+      todasBrincadeiras.forEach(b => {
+        b.vencedores.forEach(vencedor => {
+          const pontos = PONTUACAO[vencedor.lugar];
+          const time = times.find(t => t.id === vencedor.timeId);
+          if (time && pontos !== undefined) time.pontuacao += pontos;
+        });
+      });
     }
 
     function renderizarPlacar() {
+      calcularPontuacaoTotal();
       const lista = document.getElementById('placarLista');
       lista.innerHTML = '';
-      
-      const todasComVencedor = [
-        ...brincadeirasAtivas.filter(b => b.vencedor),
-        ...brincadeirasFinalizadas.filter(b => b.vencedor)
-      ];
-      
-      if (todasComVencedor.length === 0) {
-        lista.innerHTML = '<div class="empty-state">Nenhum vencedor registrado ainda</div>';
+      const timesOrdenados = [...times].sort((a, b) => b.pontuacao - a.pontuacao);
+      if (timesOrdenados.length === 0) {
+        lista.innerHTML = '<div class="empty-state">Adicione times para ver o placar.</div>';
         return;
       }
       
-      todasComVencedor.forEach(b => {
-        const time = times.find(t => t.id === b.vencedor);
-        if (time) {
+      const placarGeralTitle = document.createElement('h3');
+      placarGeralTitle.textContent = '🏆 Ranking Geral';
+      placarGeralTitle.style.fontSize = '1.3rem';
+      placarGeralTitle.style.fontWeight = '800';
+      placarGeralTitle.style.color = '#667eea';
+      placarGeralTitle.style.marginBottom = '12px';
+      lista.appendChild(placarGeralTitle);
+
+      timesOrdenados.forEach((time, index) => {
+        const item = document.createElement('div');
+        item.className = 'placar-item';
+        item.style.backgroundColor = '#f8f9ff';
+        item.style.borderLeft = `6px solid ${time.cor}`;
+        const nome = document.createElement('span');
+        nome.className = 'brincadeira-nome';
+        nome.textContent = `${index + 1}º ${time.nome}`;
+        nome.style.color = '#2d3748';
+        nome.style.fontWeight = '800';
+        const pontuacao = document.createElement('span');
+        pontuacao.className = 'vencedor';
+        pontuacao.textContent = `${time.pontuacao} pts`;
+        pontuacao.style.backgroundColor = time.cor;
+        pontuacao.style.color = 'white';
+        item.appendChild(nome);
+        item.appendChild(pontuacao);
+        lista.appendChild(item);
+      });
+      
+      const todasComVencedor = [...brincadeirasFinalizadas.filter(b => b.vencedores.length > 0)];
+      if (todasComVencedor.length > 0) {
+        const detalheTitle = document.createElement('h3');
+        detalheTitle.textContent = '📝 Histórico de Brincadeiras';
+        detalheTitle.style.fontSize = '1.3rem';
+        detalheTitle.style.fontWeight = '800';
+        detalheTitle.style.color = '#667eea';
+        detalheTitle.style.marginTop = '24px';
+        detalheTitle.style.marginBottom = '12px';
+        lista.appendChild(detalheTitle);
+        todasComVencedor.reverse().forEach(b => {
           const div = document.createElement('div');
           div.className = 'placar-item';
-          
-          const nome = document.createElement('span');
-          nome.className = 'brincadeira-nome';
-          nome.textContent = b.nome;
-          
-          const vencedor = document.createElement('span');
-          vencedor.className = 'vencedor';
-          vencedor.style.backgroundColor = time.cor;
-          vencedor.textContent = time.nome;
-          
-          div.appendChild(nome);
-          div.appendChild(vencedor);
+          div.style.flexDirection = 'column';
+          div.style.alignItems = 'flex-start';
+          div.style.backgroundColor = '#f8f9ff';
+          const nomeBrincadeira = document.createElement('span');
+          nomeBrincadeira.className = 'brincadeira-nome';
+          nomeBrincadeira.textContent = b.nome;
+          nomeBrincadeira.style.color = '#2d3748';
+          nomeBrincadeira.style.marginBottom = '8px';
+          nomeBrincadeira.style.fontSize = '1.05rem';
+          div.appendChild(nomeBrincadeira);
+          b.vencedores.forEach(vencedor => {
+            const time = times.find(t => t.id === vencedor.timeId);
+            if (time) {
+              const vencedorItem = document.createElement('span');
+              vencedorItem.className = 'vencedor';
+              vencedorItem.style.backgroundColor = time.cor;
+              vencedorItem.textContent = `${vencedor.lugar}º: ${time.nome} (+${PONTUACAO[vencedor.lugar]} pts)`;
+              vencedorItem.style.marginRight = '8px';
+              vencedorItem.style.marginBottom = '8px';
+              div.appendChild(vencedorItem);
+            }
+          });
           lista.appendChild(div);
-        }
-      });
+        });
+      }
     }
 
     function abrirSorteio() {
@@ -735,23 +1056,231 @@
       document.getElementById('modalSorteio').classList.remove('active');
     }
 
+    const PERGUNTAS_PASSO_A_PASSO = [
+      { pergunta: 'Qual é o planeta conhecido como "Planeta Vermelho"?', resposta: 'Marte' },
+      { pergunta: 'Qual é a capital da França?', resposta: 'Paris' },
+      { pergunta: 'Qual é o maior animal do planeta?', resposta: 'Baleia-azul' },
+      { pergunta: 'Quem foi o autor de "Romeu e Julieta"?', resposta: 'William Shakespeare' },
+      { pergunta: 'Qual é o plural de pão?', resposta: 'Pães' },
+      { pergunta: 'Que profissional cuida dos dentes?', resposta: 'Dentista' },
+      { pergunta: 'Qual é a metade de 20?', resposta: '10' },
+      { pergunta: 'Qual é o plural de charlatão?', resposta: 'Charlatães' },
+      { pergunta: 'Quantos dias tem um ano bissexto?', resposta: '366' },
+      { pergunta: 'Qual é o peixe-palhaço protagonista de "Procurando Nemo"?', resposta: 'Nemo' },
+      { pergunta: 'Qual é o maior planeta do Sistema Solar?', resposta: 'Júpiter' },
+      { pergunta: 'Que animal tem 8 braços?', resposta: 'Polvo' },
+      { pergunta: 'Que país é famoso pela Torre Eiffel?', resposta: 'França' },
+      { pergunta: 'Quanto é 7 × 7?', resposta: '49' },
+      { pergunta: 'Qual é o número que vem depois de 39?', resposta: '40' },
+      { pergunta: 'Qual é o dobro de 12?', resposta: '24' },
+      { pergunta: 'Como se chama o cachorro do Mickey?', resposta: 'Pluto' },
+      { pergunta: 'Em que continente fica o Egito?', resposta: 'África' },
+      { pergunta: 'Que animal é famoso por mudar de cor?', resposta: 'Camaleão' },
+      { pergunta: 'Qual é o nome do processo das plantas produzirem seu alimento?', resposta: 'Fotossíntese' },
+      { pergunta: 'Quem pintou a Mona Lisa?', resposta: 'Leonardo da Vinci' },
+      { pergunta: 'Quem foi o primeiro presidente do Brasil?', resposta: 'Deodoro da Fonseca' },
+      { pergunta: 'Como se chama o melhor amigo do Shrek?', resposta: 'Burro' },
+      { pergunta: 'Em que oceano fica o Brasil?', resposta: 'Atlântico' },
+      { pergunta: 'Qual é o maior órgão do corpo humano?', resposta: 'Pele' },
+      { pergunta: 'Em "Turma da Mônica", qual é o maior rival da Mônica?', resposta: 'Cebolinha' },
+      { pergunta: 'O que mede um termômetro?', resposta: 'Temperatura' },
+      { pergunta: 'Quem é o protagonista de "Harry Potter"?', resposta: 'Harry Potter' },
+      { pergunta: 'De que fruta é feito o vinho?', resposta: 'Uva' },
+      { pergunta: 'Em "Carros", qual é o nome do carro vermelho protagonista?', resposta: 'Relâmpago McQueen' },
+      { pergunta: 'Que cor resulta da mistura de azul + amarelo?', resposta: 'Verde' },
+      { pergunta: 'Quanto é 100 ÷ 10?', resposta: '10' },
+      { pergunta: 'Quantos ossos tem o corpo humano adulto?', resposta: '206' },
+      { pergunta: 'Quem é o pai do Simba?', resposta: 'Mufasa' },
+      { pergunta: 'Quantos estados tem o Brasil?', resposta: '26 + Distrito Federal' },
+      { pergunta: 'Que som a vaca faz?', resposta: 'Muuuuu' },
+      { pergunta: 'Quem é o protagonista do filme "Homem de Ferro"?', resposta: 'Tony Stark' },
+      { pergunta: 'Quantas cores tem o arco-íris?', resposta: '7' },
+      { pergunta: 'Qual é a cor do sangue dentro do corpo?', resposta: 'Vermelho' },
+      { pergunta: 'Qual é o maior oceano do mundo?', resposta: 'Oceano Pacífico' },
+      { pergunta: 'Qual é o elemento químico representado por "O"?', resposta: 'Oxigênio' },
+      { pergunta: 'Qual é o super-herói conhecido como "Homem-Morcego"?', resposta: 'Batman' },
+      { pergunta: 'Quanto é 4 × 0?', resposta: '0' },
+      { pergunta: 'Que animal põe ovos e tem bico, mas não é um pássaro?', resposta: 'Ornitorrinco' },
+      { pergunta: 'Qual é o plural de mão?', resposta: 'Mãos' },
+      { pergunta: 'Que tipo de animal é a tartaruga?', resposta: 'Réptil' },
+      { pergunta: 'Qual é o maior país da América do Sul?', resposta: 'Brasil' },
+      { pergunta: 'Em "Kung Fu Panda", qual é o nome do panda protagonista?', resposta: 'Po' },
+      { pergunta: 'Qual princesa da Disney perde o sapatinho de cristal?', resposta: 'Cinderela' },
+      { pergunta: 'Em "A Fantástica Fábrica de Chocolate", qual é o nome do dono da fábrica?', resposta: 'Willy Wonka' },
+      { pergunta: 'Quanto é 9 × 9?', resposta: '81' },
+      { pergunta: 'Que animal é conhecido como "rei da selva"?', resposta: 'Leão' },
+      { pergunta: 'Quantos lados tem um octógono?', resposta: '8' }
+    ];
+    
+    let perguntaAtualIndex = -1;
+    let mostrandoResposta = false;
+    
+    function mostrarPergunta() {
+      if (mostrandoResposta) {
+        perguntaAtualIndex = (perguntaAtualIndex + 1) % PERGUNTAS_PASSO_A_PASSO.length;
+        mostrandoResposta = false;
+        document.getElementById('btnPergunta').textContent = 'Mostrar Resposta';
+      } else {
+        mostrandoResposta = true;
+        document.getElementById('btnPergunta').textContent = 'Próxima Pergunta';
+      }
+      const item = PERGUNTAS_PASSO_A_PASSO[perguntaAtualIndex];
+      if (perguntaAtualIndex === -1) {
+        perguntaAtualIndex = 0;
+        document.getElementById('btnPergunta').textContent = 'Mostrar Resposta';
+      }
+      const texto = mostrandoResposta ? `✅ Resposta: ${item.resposta}` : `❓ ${item.pergunta}`;
+      document.getElementById('textoPergunta').textContent = texto;
+    }
+
     function sortear() {
       const min = parseInt(document.getElementById('minNum').value) || 1;
       const max = parseInt(document.getElementById('maxNum').value) || 100;
-      
       if (min > max) {
         alert('O número mínimo deve ser menor que o máximo!');
         return;
       }
-      
       const resultado = Math.floor(Math.random() * (max - min + 1)) + min;
-      document.getElementById('resultadoSorteio').innerHTML = `
-        <div class="resultado-sorteio">${resultado}</div>
-      `;
+      document.getElementById('resultadoSorteio').innerHTML = `<div class="resultado-sorteio">${resultado}</div>`;
     }
 
+    function renderizarContadorPassaOuRepassa() {
+      const container = document.getElementById('contadorPassaOuRepassa');
+      container.innerHTML = '';
+      
+      if (times.length === 0) {
+        container.innerHTML = '<div class="empty-state">Adicione times primeiro</div>';
+        return;
+      }
+      
+      times.forEach(time => {
+        if (!passaOuRepassaAcertos[time.id]) {
+          passaOuRepassaAcertos[time.id] = 0;
+        }
+        
+        const div = document.createElement('div');
+        div.className = 'contador-time';
+        
+        const nomeDiv = document.createElement('div');
+        nomeDiv.className = 'contador-time-nome';
+        nomeDiv.textContent = time.nome;
+        nomeDiv.style.backgroundColor = time.cor;
+        
+        const controles = document.createElement('div');
+        controles.className = 'contador-controles';
+        
+        const btnMenos = document.createElement('button');
+        btnMenos.className = 'btn-contador';
+        btnMenos.textContent = '−';
+        btnMenos.onclick = () => {
+          if (passaOuRepassaAcertos[time.id] > 0) {
+            passaOuRepassaAcertos[time.id]--;
+            renderizarContadorPassaOuRepassa();
+            salvarDados();
+          }
+        };
+        
+        const valor = document.createElement('span');
+        valor.className = 'contador-valor';
+        valor.textContent = passaOuRepassaAcertos[time.id];
+        
+        const btnMais = document.createElement('button');
+        btnMais.className = 'btn-contador';
+        btnMais.textContent = '+';
+        btnMais.onclick = () => {
+          passaOuRepassaAcertos[time.id]++;
+          renderizarContadorPassaOuRepassa();
+          salvarDados();
+        };
+        
+        controles.appendChild(btnMenos);
+        controles.appendChild(valor);
+        controles.appendChild(btnMais);
+        
+        div.appendChild(nomeDiv);
+        div.appendChild(controles);
+        
+        container.appendChild(div);
+      });
+    }
+
+    function finalizarPassaOuRepassa() {
+      if (times.length === 0) {
+        alert('Adicione times primeiro!');
+        return;
+      }
+      
+      const brincadeira = brincadeirasAtivas.find(b => b.nome === 'Passa ou Repassa (torta na cara/bexiga)');
+      if (!brincadeira) {
+        alert('Brincadeira "Passa ou Repassa" não encontrada!');
+        return;
+      }
+      
+      const ranking = times.map(t => ({
+        id: t.id,
+        nome: t.nome,
+        acertos: passaOuRepassaAcertos[t.id] || 0
+      })).sort((a, b) => b.acertos - a.acertos);
+      
+      brincadeira.vencedores = [];
+      ranking.forEach((item, index) => {
+        const lugar = index + 1;
+        if (lugar <= 4) {
+          brincadeira.vencedores.push({ lugar, timeId: item.id });
+        }
+      });
+      
+      const mensagem = `Ranking calculado!\n\n${ranking.map((r, i) => `${i + 1}º: ${r.nome} - ${r.acertos} acertos`).join('\n')}\n\nA brincadeira será finalizada automaticamente.`;
+      
+      alert(mensagem);
+      
+      // Finaliza automaticamente a brincadeira
+      removerBrincadeira(brincadeira.id);
+      
+      // Limpa os contadores para próxima vez
+      times.forEach(t => {
+        passaOuRepassaAcertos[t.id] = 0;
+      });
+      
+      renderizarContadorPassaOuRepassa();
+      salvarDados();
+    }
+
+    function resetarTudo() {
+      const confirmar = confirm('⚠️ ATENÇÃO!\n\nIsso vai apagar TODOS os dados:\n• Times cadastrados\n• Brincadeiras finalizadas\n• Placar completo\n• Contadores\n\nTem certeza que deseja começar uma nova gincana?');
+      
+      if (!confirmar) return;
+      
+      // Limpa todos os dados
+      times = [];
+      brincadeirasAtivas = brincadeiras.map((item, i) => ({
+        id: i, 
+        nome: item.nome, 
+        periodo: item.periodo,
+        vencedores: []
+      }));
+      brincadeirasFinalizadas = [];
+      passaOuRepassaAcertos = {};
+      perguntaAtualIndex = -1;
+      mostrandoResposta = false;
+      
+      // Limpa localStorage
+      localStorage.removeItem('gincanaData');
+      
+      // Atualiza interface
+      renderizarTimes();
+      renderizarBrincadeiras();
+      renderizarContadorPassaOuRepassa();
+      document.getElementById('textoPergunta').textContent = 'Clique no botão para começar!';
+      document.getElementById('btnPergunta').textContent = 'Próxima Pergunta';
+      
+      alert('✅ Tudo foi resetado! Pode começar uma nova gincana.');
+    }
+
+    carregarDados();
     renderizarBrincadeiras();
     renderizarTimes();
+    renderizarContadorPassaOuRepassa();
   </script>
 </body>
 </html>
