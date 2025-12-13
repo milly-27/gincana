@@ -425,13 +425,13 @@
     }
 
     .time-card .remove-time:hover {
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.8);
       transform: scale(1.1);
     }
 
     .form-time {
       display: grid;
-      grid-template-columns: 1fr 1fr auto;
+      grid-template-columns: 1fr 1fr 80px;
       gap: 10px;
       margin-bottom: 18px;
     }
@@ -507,77 +507,6 @@
       padding: 12px;
       font-size: 0.9rem;
       font-weight: 500;
-    }
-
-    .cronograma-box {
-      background: #f8f9ff;
-      border-radius: 16px;
-      padding: 18px;
-    }
-
-    .cronograma-item {
-      margin-bottom: 14px;
-      padding: 14px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: all 0.3s ease;
-    }
-
-    .cronograma-item:hover {
-      transform: translateX(4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .cronograma-item.antes {
-      border-left: 5px solid #667eea;
-    }
-
-    .cronograma-item.lanche {
-      border-left: 5px solid #48bb78;
-    }
-
-    .cronograma-item.depois {
-      border-left: 5px solid #f5576c;
-    }
-
-    .cronograma-item.bingo {
-      border-left: 5px solid #f093fb;
-    }
-
-    .cronograma-title {
-      font-weight: 800;
-      margin-bottom: 6px;
-      font-size: 1.1rem;
-    }
-
-    .cronograma-desc {
-      color: #2d3748;
-      font-size: 0.98rem;
-      font-weight: 500;
-    }
-
-    .tempo-total {
-      margin-top: 18px;
-      padding: 16px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-    }
-
-    .tempo-total-title {
-      color: white;
-      font-weight: 800;
-      font-size: 1.2rem;
-    }
-
-    .tempo-total-valor {
-      color: white;
-      font-size: 1.8rem;
-      font-weight: 900;
-      margin-top: 6px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .contador-time {
@@ -659,20 +588,18 @@
     <div class="card">
       <h2>🏆 Times</h2>
       <div class="form-time">
-        <div class="form-time-row">
-          <input type="text" id="nomeTime" placeholder="Nome do time">
-          <select id="corTime">
-            <option value="#ff0000">🔴 Vermelho</option>
-            <option value="#0000ff">🔵 Azul</option>
-            <option value="#00ff00">🟢 Verde</option>
-            <option value="#ffff00">🟡 Amarelo</option>
-            <option value="#800080">🟣 Roxo</option>
-            <option value="#ff69b4">🩷 Rosa</option>
-            <option value="#ff8c00">🟠 Laranja</option>
-            <option value="#00ffff">🔷 Ciano</option>
-          </select>
-        </div>
-        <button class="btn-primary" onclick="adicionarTime()">➕ Adicionar Time</button>
+        <input type="text" id="nomeTime" placeholder="Nome do time">
+        <select id="corTime">
+          <option value="#ff0000">🔴 Vermelho</option>
+          <option value="#0000ff">🔵 Azul</option>
+          <option value="#00ff00">🟢 Verde</option>
+          <option value="#ffff00">🟡 Amarelo</option>
+          <option value="#800080">🟣 Roxo</option>
+          <option value="#ff69b4">🩷 Rosa</option>
+          <option value="#ff8c00">🟠 Laranja</option>
+          <option value="#ffffff">⚪ Branco</option>
+        </select>
+        <button class="btn-primary" onclick="adicionarTime()">➕ OK</button>
       </div>
       <div class="times-container" id="timesContainer"></div>
     </div>
@@ -730,23 +657,20 @@
 
   <script>
     const brincadeiras = [
-      {nome: 'Bambole', periodo: 'antes'},
       {nome: 'Corrida de saco', periodo: 'antes'},
       {nome: 'Estorar balão no pé', periodo: 'antes'},
       {nome: 'Colocar blusa sem deixar o balão cair', periodo: 'antes'},
-      {nome: 'Dança das Cadeiras', periodo: 'antes'},
       {nome: 'Nó', periodo: 'antes'},
       {nome: 'Passar balão no meio das pernas', periodo: 'antes'},
       {nome: 'Passa ou Repassa (torta na cara/bexiga)', periodo: 'antes'},
       {nome: 'Passar trigo por carta', periodo: 'antes'},
       {nome: 'Construção de Torre', periodo: 'antes'},
-      {nome: 'Passar pela lona com copo de água', periodo: 'antes'},
+      {nome: 'Caça ao Tesouro', periodo: 'antes'},
       {nome: 'Copo Envenenado', periodo: 'depois'},
       {nome: 'Captura Bexiga', periodo: 'depois'},
       {nome: 'Segurar o balde', periodo: 'depois'},
       {nome: 'Vara na cabeça', periodo: 'depois'},
-      {nome: 'Esponja de água', periodo: 'depois'},
-      {nome: 'Passar água no copo para trás', periodo: 'depois'},
+      {nome: 'Passar bexiga de água para trás', periodo: 'depois'},
       {nome: 'Tomar água primeiro', periodo: 'depois'},
       {nome: 'Bingo', periodo: 'bingo'}
     ];
